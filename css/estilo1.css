@@ -220,7 +220,17 @@ div.contenedor__imagenes img{
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     margin-bottom: var(--marginElementos);
 
+    /*efecto*/
+    filter: brightness(80%);
+
 }
+
+ /*efecto*/
+div.contenedor__imagenes img:hover{
+    filter: brightness(100%);
+    transition: all 0.3s ease-in;
+}
+
 
 
 /*People say*/
@@ -232,7 +242,23 @@ img.contenedor__people{
 
     border-radius: 50%;
     object-fit: cover;  /*para q no se distorcione la imagen*/
+
+    animation: ilustracionAnimacion ease-in 1s infinite alternate;
+    
 }
+
+@keyframes ilustracionAnimacion
+{
+    0%{
+        transform: scale(1.15);
+    }
+
+    100%{
+        transform: scale(1.04);
+    }
+    
+}
+
 
 h4.contenedor__persona{
     font-size: 22px;
@@ -271,6 +297,14 @@ div.contenedor__redesSociales{
 div.contenedor__redesSociales i{
     font-size: 60px;
     color: #fff;
+
+    filter: brightness(80%);
+}
+
+
+div.contenedor__redesSociales i:hover{
+    filter: brightness(100%);
+    transition: all 0.3s ease-in;
 }
 
 
