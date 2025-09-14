@@ -1,0 +1,337 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+   
+    /*
+    outline: 1px solid red;  
+    */
+ 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+
+    /*
+    
+    background-image: linear-gradient(to top left, steelblue, hotpink);
+    background-repeat: no-repeat;
+
+    */
+    /*height: 100vh;*/
+
+/*
+    background: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+*/
+
+    /*
+    min-height: 100vh;
+    */
+}
+
+/*declar variable*/
+:root{
+    --colorTexto:#7e7e7e;
+    --colorBotones: #f69229;
+    --colorFondo: #5d8a9f;
+    --paddingSecciones: 60px 0;
+    --marginElementos: 40px;
+}
+
+
+.contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+
+    overflow: hidden;
+
+    padding: var(--paddingSecciones);
+
+
+}
+
+/*header*/
+/*menu*/
+nav.nav__MenuNavegacion{
+
+    height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    align-items: center;
+
+    padding: 0;
+}
+
+/*altura del logo*/
+div.nav__logo{
+    height: 70px;   
+}
+
+div.nav__logo img{
+    height: 100%;
+    display: block;
+}
+
+
+
+
+
+
+
+div.nav__enlace li{
+    display: inline-block;
+    list-style: none;
+}
+
+div.nav__enlace li a{
+    color: var(--colorFondo);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+
+div.nav__enlace li a:hover{
+    text-decoration: underline;   
+}
+
+/*banner*/
+section.hero{
+    height: 500px;
+
+    background-image: url("../img/imagen-flexbox-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-attachment: fixed;
+}
+
+div.hero__textos{
+    padding: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+div.hero__textos h1{
+    font-size: 60px;
+    font-weight: 700;
+}
+
+
+div.hero__textos p{
+    font-weight: 300;
+    font-size: 25px;
+    margin: 15px 0;
+}
+
+
+div.hero__textos a{
+    width: 150px;
+    display: block;
+    padding: 15px 0;
+    margin: 0 auto;
+    background-color: var(--colorBotones);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+/*Beneficios*/
+h2.contenedor__tituloSeccion{
+    text-align: center;
+    font-size: 35px;
+    color: var(--colorFondo);
+}
+
+p.contenedor__parrafoSeccion{
+    text-align: center;
+    color: var(--colorTexto);
+    margin: 20px 0;
+}
+
+div.beneficios{
+    padding: var(--paddingSecciones) 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    flex-wrap: wrap;    
+}
+
+div.beneficio{
+    font-size: 20px;
+    width: 10em;    /*1em = 10*/
+    height: 10em;
+
+    background-image: url("../img/imagen-flexbox-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+/*proyectos*/
+section.proyectos{
+    background-color: #f2f2f2;
+}
+
+div.contenedor div.contenedor__imagenes{
+    display: flex;   
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+div.contenedor__imagenes img{
+    display: block; 
+    object-fit: cover;  /*para q no se distorcione la imagen*/
+    width: 30%;
+    height: 220px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: var(--marginElementos);
+
+}
+
+
+/*People say*/
+img.contenedor__people{
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+
+    border-radius: 50%;
+    object-fit: cover;  /*para q no se distorcione la imagen*/
+}
+
+h4.contenedor__persona{
+    font-size: 22px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+
+/*footer*/
+footer{
+    background-image: url("../img/imagen-flexbox-min.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+footer div.contenedor h2.contenedor__tituloSeccion, footer div.contenedor p.contenedor__parrafoSeccion{
+    color: #fff;
+}
+
+div.contenedor__redesSociales{
+    padding-top: var(--marginElementos);
+    width: 80%;
+
+
+    display: flex;   
+    flex-direction: row; 
+    justify-content: space-evenly;
+
+    margin: auto;
+}
+
+
+div.contenedor__redesSociales i{
+    font-size: 60px;
+    color: #fff;
+}
+
+
+/*responsive*/
+@media screen and (max-width: 800px) 
+{
+    nav.nav__MenuNavegacion{
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        justify-content: space-evenly;
+
+    }
+
+    section.hero h1{
+        font-size: 38px;
+    }
+    
+    div.beneficio{
+        margin-bottom: var(--marginElementos);
+    }
+
+
+    div.contenedor__imagenes img{
+        width: 90%;
+    }
+
+    div.contenedor__redesSociales{
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.contenedor__redesSociales i{
+        margin-bottom: 20px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
